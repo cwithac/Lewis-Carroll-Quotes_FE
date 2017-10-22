@@ -12,6 +12,11 @@
     <script src="js/app.js" charset="utf-8"></script>
   </head>
   <body ng-controller="characterController as charctrl">
+    <ul>
+      <li ng-repeat="individualCharacter in charctrl.characters">
+        {{individualCharacter.name}}
+      </li>
+    </ul>
 
   </body>
 </html>
