@@ -14,7 +14,6 @@ this.baseURL = 'http://localhost:3000/';
 //VARIABLES
 //------------------------------------------------------
   this.characters = [];
-  this.individualCharacter = [];
 
 //------------------------------------------------------
 //INDEX ROUTE FOR ALL CHARACTERS
@@ -25,21 +24,9 @@ this.getCharacters = function() {
     url: this.baseURL + 'characters/'
   }).then(function(response){
     this.characters = response.data;
+    console.log(response.data);
   }.bind(this));
 };
-
-//------------------------------------------------------
-//SHOW ROUTE FOR INDIVIDUAL CHARACTER
-//------------------------------------------------------
-// this.showIndividualCharacter = function(character_id) {
-//   $http({
-//     method: 'GET',
-//     url: this.baseURL + 'characters/' + character_id
-//   }).then(function(response){
-//     console.log(response.data);
-//   }.bind(this));
-// };
-
 
 //------------------------------------------------------
 //PAGE LOAD FUNCTION CALLS
